@@ -1,0 +1,18 @@
+@import './fonts.css';
+@import './typography.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply font-body bg-background text-foreground scroll-smooth;
+  }
+  :root {
+    --radius: 0.5rem;
+  }
+}
