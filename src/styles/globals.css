@@ -10,7 +10,7 @@
     @apply border-border;
   }
   body {
-    @apply font-body bg-background text-foreground scroll-smooth;
+    @apply font-body bg-background text-foreground;
   }
   :root {
     --radius: 0.5rem;

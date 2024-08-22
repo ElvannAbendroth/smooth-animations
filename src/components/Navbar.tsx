@@ -15,13 +15,11 @@ export type NavItem = {
 }
 
 const navItems: NavItem[] = [
-  { label: 'About', href: '/about', type: 'link' },
-  { label: 'Blog', href: '/blog', type: 'link' },
-  { label: 'Projects', href: '/projects', type: 'link' },
-  { label: 'Contact', href: '/contact', type: 'link' },
+  { label: 'About', href: '/#about', type: 'link' },
+  { label: 'Services', href: '/#services', type: 'link' },
   {
     label: 'Visit Repo',
-    href: 'https://github.com/ElvannAbendroth/rock-your-astro',
+    href: 'https://github.com/ElvannAbendroth/rock-your-astro-blank',
     type: 'button',
     icon: 'Github',
   },

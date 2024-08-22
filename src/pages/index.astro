@@ -3,6 +3,25 @@ import Layout from '../layouts/Layout.astro'
 ---
 
 <Layout title="Homepage">
-  <h1 class="typo-title">Rock Your Astro (Blank)</h1>
-  <p class="typo-p uppercase">Welcome to the "blank" version of Rock You Astro's template!</p>
+  <div
+    id="hero"
+    class="h-screen flex flex-col justify-center items-center bg-pink-100 w-full gap-8 px-6 py-8 sm:py-20 sm:px-10"
+  >
+    <h1 class="typo-title">Rock Your Astro (Blank)</h1>
+    <p class="typo-p uppercase font-semibold">Welcome to the "blank" version of Rock You Astro's template!</p>
+  </div>
+  <div
+    id="about"
+    class="h-screen flex flex-col justify-center items-center w-full bg-blue-100 gap-8 px-6 py-8 sm:py-20 sm:px-10"
+  >
+    <h1 class="typo-h1">About</h1>
+    <p class="typo-p">This is an about section</p>
+  </div>
+  <div
+    id="services"
+    class="h-screen flex flex-col justify-center items-center w-full bg-green-100 gap-8 px-6 py-8 sm:py-20 sm:px-10"
+  >
+    <h1 class="typo-h1">Services</h1>
+    <p class="typo-p">This is a services section</p>
+  </div>
 </Layout>

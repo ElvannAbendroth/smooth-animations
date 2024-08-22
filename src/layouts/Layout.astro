@@ -22,7 +22,7 @@ const { title = siteConfig.title, description = siteConfig.description, openGrap
 const { pathname } = Astro.url
 ---
 
-<html lang="en" class="">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content={description} />
@@ -38,9 +38,7 @@ const { pathname } = Astro.url
   <body class="flex flex-col">
     <Navbar client:load pathname={pathname} />
 
-    <main
-      class="flex flex-col items-center justify-center flex-grow p-2 w-full px-6 py-8 sm:py-20 sm:px-10 min-h-screen"
-    >
+    <main class="flex flex-col items-center justify-center flex-grow w-full min-h-screen">
       <slot />
     </main>
     <Footer />
