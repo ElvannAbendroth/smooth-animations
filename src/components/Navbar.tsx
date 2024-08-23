@@ -1,9 +1,11 @@
+import { motion, useScroll, useMotionValue, useTransform } from 'framer-motion'
 import Icon from '@/ui/icon'
-import { type FC } from 'react'
+import { useState, useEffect, type FC } from 'react'
 import { cn } from '@/lib/utils'
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet'
 import { Button } from '@/ui/button'
 import type { icons } from 'lucide-react'
+import ScrollProgressBar from './ScrollProgressBar'
 
 export type NavItem = {
   label: string
@@ -33,6 +35,7 @@ interface NavbarProps {
 export const Navbar: FC<NavbarProps> = ({ pathname }) => {
   return (
     <nav className="sticky top-0 bg-background px-4 py-3 md:py-4 md:px-6 ">
+      <ScrollProgressBar />
       <div className="flex justify-between max-w-layout mx-auto">
         <a
           className="font-bold text-xl font-display hover:text-foreground-hover flex gap-3 place-items-center"
