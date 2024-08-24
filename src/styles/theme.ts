@@ -3,7 +3,7 @@ const theme = {
     border: '#23313E',
     input: '#23313E',
     ring: '#23313E',
-    background: { DEFAULT: '#131E27', dark: '#0A131A' },
+    background: { DEFAULT: '#131E27', dark: '#0A131A', light: '#304250' },
     foreground: '#ECF0F3',
     primary: {
       DEFAULT: '#ECF0F3',
