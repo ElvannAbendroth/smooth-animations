@@ -19,7 +19,7 @@ interface FooterProps {}
 
 const Footer: FC<FooterProps> = () => {
   return (
-    <footer className="bg-input text-foreground flex flex-col align-middle items-center">
+    <footer className=" flex flex-col align-middle items-center">
       <div className="p-4 w-full max-w-layout rounded-t-lg gap-12 py-12 px-8">
         <div className="flex flex-col gap-4 items-center">
           <a

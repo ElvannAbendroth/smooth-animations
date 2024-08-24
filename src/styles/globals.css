@@ -10,9 +10,13 @@
     @apply border-border;
   }
   body {
-    @apply font-body bg-background text-foreground;
+    @apply font-body bg-background text-foreground gradient-1 bg-fixed;
   }
   :root {
     --radius: 0.5rem;
+  }
+
+  .gradient-1 {
+    @apply bg-gradient-to-br from-background to-background-dark;
   }
 }

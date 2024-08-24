@@ -34,7 +34,7 @@ interface NavbarProps {
 //React version of Navbar
 export const Navbar: FC<NavbarProps> = ({ pathname }) => {
   return (
-    <nav className="sticky top-0 bg-background px-4 py-3 md:py-4 md:px-6 ">
+    <nav className="sticky top-0  px-4 py-3 md:py-4 md:px-6 ">
       <ScrollProgressBar />
       <div className="flex justify-between max-w-layout mx-auto">
         <a
@@ -44,8 +44,8 @@ export const Navbar: FC<NavbarProps> = ({ pathname }) => {
           <Icon name="Rocket" /> <span>Rock Your Astro (Blank)</span>
         </a>
         <div className="flex flex-gap-12 items-center gap-4 ">
-          <DesktopMenu navItems={navItems} className="hidden md:block" pathname={pathname} />
-          <MobileMenu navItems={navItems} className="block md:hidden" pathname={pathname} />
+          {/* <DesktopMenu navItems={navItems} className="hidden xl:block" pathname={pathname} /> */}
+          <MobileMenu navItems={navItems} className="" pathname={pathname} />
           <div className="flex flex-row items-center gap-2 font-bold text-sm flex-wrap"></div>
         </div>
       </div>
@@ -104,8 +104,8 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({ navItems, className, pat
         <SheetTrigger className="p-2 rounded-md hover:bg-input-hover data-[state=open]:bg-input-hover">
           <Icon name="Menu" size={21} strokeWidth={2.3} />
         </SheetTrigger>
-        <SheetContent className="flex flex-col justify-center text-center items-center md:hidden h-screen">
-          <ul className="md:hidden flex flex-col gap-4 align-center">
+        <SheetContent side={'bottom'} className="flex flex-col justify-center text-center items-center  h-screen">
+          <ul className="flex flex-col gap-4 align-center">
             {navItems.map(item => {
               const isActive = item.href === '/' ? pathname === '/' : pathname.startsWith(item.href)
               if (item.type === 'link')
