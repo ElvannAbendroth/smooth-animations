@@ -37,6 +37,9 @@ export default {
       backgroundSize: {
         '300%': '300%',
       },
+      cursor: {
+        fancy: 'url(public/cursor.svg), pointer',
+      },
       keyframes: {
         'accordion-down': {
           from: { height: '0' },
@@ -45,6 +48,16 @@ export default {
         'accordion-up': {
           from: { height: 'var(--radix-accordion-content-height)' },
           to: { height: '0' },
+        },
+        'slide-in': {
+          from: {
+            opacity: '0',
+            transform: 'translateY(-10px)',
+          },
+          to: {
+            opacity: '1',
+            transform: 'translateY(0)',
+          },
         },
 
         'animated-gradient': {
@@ -55,6 +68,7 @@ export default {
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
+        'slide-in': 'slide-in 3s ease 100ms forwards',
 
         gradient: 'animated-gradient 6s ease infinite alternate',
       },

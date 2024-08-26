@@ -10,7 +10,7 @@
     @apply border-border;
   }
   body {
-    @apply font-body bg-background text-foreground gradient-1 animate-gradient bg-fixed;
+    @apply font-body bg-background text-foreground gradient-1 animate-gradient bg-fixed cursor-fancy;
   }
   :root {
     --radius: 0.5rem;
