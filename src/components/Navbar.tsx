@@ -1,6 +1,5 @@
-import { motion, useScroll, useMotionValue, useTransform } from 'framer-motion'
 import Icon from '@/ui/icon'
-import { useState, useEffect, type FC } from 'react'
+import { type FC } from 'react'
 import { cn } from '@/lib/utils'
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet'
 import { Button } from '@/ui/button'
@@ -19,6 +18,7 @@ export type NavItem = {
 const navItems: NavItem[] = [
   { label: 'About', href: '/#about', type: 'link' },
   { label: 'Services', href: '/#services', type: 'link' },
+  { label: 'Contact', href: '/contact', type: 'link' },
   {
     label: 'Visit Repo',
     href: 'https://github.com/ElvannAbendroth/rock-your-astro-blank',
@@ -108,7 +108,7 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({ navItems, className, pat
           <ul className="flex flex-col gap-4 align-center">
             {navItems.map(item => {
               const isActive = item.href === '/' ? pathname === '/' : pathname.startsWith(item.href)
-              if (item.type === 'link')
+              if (item.type === 'link' && !item.href.includes('#'))
                 return (
                   <li key={item.label}>
                     <a
